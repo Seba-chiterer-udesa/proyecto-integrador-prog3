@@ -7,23 +7,23 @@ export default function Nav() {
 <div class="burguermenu">
                     <i class="fas fa-bars burguer"></i>
                 </div>
-                <div>
+                {/* <div>
                     <Link className="header-nav" aria-current="page" to="/"><img/></Link>
-                </div>
+                </div> */}
                 <div className="header-nav">
                     <Link className="header-nav" aria-current="page" to="/">Inicio</Link>
                 </div>
-                <div className="header-nav">
+                {/* <div className="header-nav">
                     <a href="./generos.html">Géneros</a> 
-                </div>
-                <div className="header-nav">
+                </div> */}
+                {/* <div className="header-nav">
                     <a href="./peliculas.html">Películas</a>
-                </div>
-                <div className="header-nav">
+                </div> */}
+               {/*  <div className="header-nav">
                     <a href="./series.html">Series</a>
-                </div>   
+                </div>  */}  
                 <div className="header-nav">
-                    <a href="./favourite.html">Favoritos</a>
+                    <Link to='/favourites'>Favoritos</Link>
                 </div>
                 <div className= "header-busqueda">
                         <form action="./results.html" method="GET">
