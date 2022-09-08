@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import DetailMovies from './pages/DetailMovies/DetailMovies';
 import NotFound from './pages/NotFound/NotFound';
 import Favoritos from './pages/Favoritos/Favoritos';
+import Populares from './pages/Populares/Populares';
+import Encartel from './pages/Encartel/Encartel';
 import {Switch, Route} from 'react-router-dom'
 
 function App() {
