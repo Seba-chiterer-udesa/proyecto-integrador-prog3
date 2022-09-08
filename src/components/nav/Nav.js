@@ -3,12 +3,12 @@ import {Link} from 'react-router-dom'
 
 export default function Nav() {
   return (
-<nav>
-<div class="burguermenu">
+
+    <header>
+        <nav>
+                <div class="burguermenu">
+
                 </div>
-                {/* <div>
-                    <Link className="header-nav" aria-current="page" to="/"><img/></Link>
-                </div> */}
                 <div className="header-nav">
                     <Link className="header-nav" aria-current="page" to="/">Inicio</Link>
                 </div>
@@ -28,6 +28,8 @@ export default function Nav() {
                         </form>
                         <a href="./results.html"><i class="fas fa-search lupa"></i></a>
                 </div>
-</nav>
+          </nav>
+    </header>
+            
   )
 }

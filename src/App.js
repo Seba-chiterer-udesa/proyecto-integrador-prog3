@@ -13,11 +13,10 @@ function App() {
     <Header/>
 
     <Switch>
-          <Route path="/" exact >
-            <Home />
-          </Route>
+          <Route path="/" exact='true' component={Home} />
+          <Route path="/populares"  component={Populares} />
+          <Route path="/encartel"  component={Encartel} />
           <Route path="/favourites" component={Favoritos} />
-          
           <Route path="/movies/id/:id" component={DetailMovies} />
           <Route component={NotFound}/>
     </Switch>

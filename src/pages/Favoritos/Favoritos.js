@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Header from '../../components/header/Header';
+import React, { Component } from 'react';
+/* import Header from '../../components/header/Header'; */
 
 class Favoritos extends Component {
     constructor(){
@@ -15,7 +15,7 @@ class Favoritos extends Component {
 
   render() {
     return (
-     <Header/>
+      <p>Favoritos</p>
     )
   }
 }
