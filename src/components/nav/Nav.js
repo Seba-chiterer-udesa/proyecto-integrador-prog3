@@ -7,7 +7,7 @@ export default function Nav() {
     <header>
         <nav>
                 <div className="burguermenu">
-
+                            
                 </div>
                 <div className="header-nav">
                     <Link className="header-nav" aria-current="page" to="/">Inicio</Link>

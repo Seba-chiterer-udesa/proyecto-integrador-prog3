@@ -52,7 +52,6 @@ body header{
     padding: 10px 10px;
     border-radius: 30px;
     margin-top: 0px;
-    margin-bottom:35px ;
 }
 
 .header-busqueda {
@@ -75,7 +74,7 @@ body header{
     background-color: #007aff;
     padding: 10px 10px;
     border-radius: 30px;
-    margin-bottom: 33px;
+    margin-top: 30px;
     
 }
 

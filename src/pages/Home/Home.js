@@ -46,19 +46,33 @@ class Home extends Component {
 
 
 <>
-        <section className='contenedor'>
+    <div class="titulo">
+          <h2>• LO MÁS VISTO EN PELÍCULAS •</h2>
+    </div>
+    <section className='contenedor'>
             {this.state.cargando === false ? (
              <p>Cargando</p>
             ) : (
             this.state.populares.map(pelicula =>(
                <Card key={pelicula.id} pelicula={pelicula}/>)
-           ),
+           )
+           )  
+            }
+    </section>
+    <div class="titulo">
+          <h2>• PELÍCULAS EN CARTEL •</h2>
+    </div>
+    <section className='contenedor1'>
+            {this.state.cargando === false ? (
+             <p>Cargando</p>
+            ) : (
             this.state.encartel.map(pelicula =>(
              <Card key={pelicula.id} pelicula={pelicula}/>)
           )
            )  
             }
     </section>
+
 </>
 
     
