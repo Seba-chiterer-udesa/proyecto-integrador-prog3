@@ -12,7 +12,7 @@ input{
 }
 
 body{
-    background-color: yellow;
+    background-image: url(./img/fondobody.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
