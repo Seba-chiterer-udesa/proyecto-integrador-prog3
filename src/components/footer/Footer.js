@@ -5,7 +5,7 @@ export default function Footer(){
     return (
         <footer>
             <article className="container_footer">
-                <div class="box-footer">
+                <div className="box-footer">
                     <div className="logo">
                         <img src="./img/logo tmdb.svg" alt="logo tdmb"/>
                     </div>
