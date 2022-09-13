@@ -10,6 +10,9 @@ class Home extends Component {
       cargando: true,
       populares: [],
       encartel: [],
+      filtradas: [],
+      filtradasBy:[],
+      favoritos: []
     };
   }    
 
@@ -36,17 +39,52 @@ class Home extends Component {
       
     
  }
+ filtrarPeliculas(filtro){
+
+  if(filtro== ''){
+    return 
+  }
+  else{
+
+
+    const url = `https://api.themoviedb.org/3/search/movie/?api_key=93e508f17b507f9418365fe0a4069252&query=${filtro}`
+    fetch(url)
+        .then((res)=> res.json())
+        .then(datos =>{ 
+            
+            this.setState({filtradas: datos.results})
+
+        })
+        .catch( err => console.log(err))
+      }
+ }
+
+ handleChange(e){
+  this.setState({
+    filterBy: e.target.value
+  },()=>{
+    this.filtrarPeliculas(this.state.filterBy)
+  })
+ }
 
  agregarMas() {
   // Logica para agregar mas personajes
  }
 
   render() {
-    return (
-
-
+    return ( 
 <>
-    <div class="titulo">
+{/* <div className= "header-busqueda">
+                        <form action="" method="GET">
+                            <input type="search" name="busqueda"  placeholder="Buscar películas o series"
+                             />
+                            <p className="alert"></p>
+                        </form>
+                        <a href="./results.html"><i className="fas fa-search lupa"></i></a>
+                </div> */}
+
+                {/* {this.state.filterBy==""?<> */} 
+    <div className="titulo">
           <h2>• LO MÁS VISTO EN PELÍCULAS •</h2>
     </div>
     <section className='contenedor'>
@@ -58,6 +96,7 @@ class Home extends Component {
            )
            )  
             }
+            
     </section>
     <div class="titulo">
           <h2>• PELÍCULAS EN CARTEL •</h2>
@@ -72,8 +111,27 @@ class Home extends Component {
            )  
             }
     </section>
-
 </>
+// :<>   <div className='card-container'>
+// {this.state.cargando === false ? (
+//       <p>Cargando</p>
+//     ) : (
+//   this.state.filtradas.map(filtrada =>(
+//       <Pelicula 
+  
+//        key={filtrada.id}
+//        pelicula={filtrada}
+//        favorito={(filtrada)=> this.handleFavoritos (filtrada)}
+//        />)
+ 
+//       )
+  
+//   )
+  
+//     }
+// </div> 
+
+// </>}
 
     
     )

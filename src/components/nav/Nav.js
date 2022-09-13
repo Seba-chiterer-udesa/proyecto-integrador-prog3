@@ -2,6 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 export default function Nav() {
+
+
+
+
+
+    
   return (
 
     <header>
@@ -23,7 +29,8 @@ export default function Nav() {
                 </div>
                 <div className= "header-busqueda">
                         <form action="" method="GET">
-                            <input type="search" name="busqueda"  placeholder="Buscar películas o series" />
+                            <input type="search" name="busqueda"  placeholder="Buscar películas o series"
+                             />
                             <p className="alert"></p>
                         </form>
                         <a href="./results.html"><i className="fas fa-search lupa"></i></a>
