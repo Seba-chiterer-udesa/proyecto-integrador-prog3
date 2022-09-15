@@ -1,7 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-function Card({pelicula}) {
-let {poster_path, title, overview, id} = pelicula
+
+
+function Card(props) {
+let {poster_path, title, overview, id} = props.pelicula
 
 const borrar = () => {
   console.log(borrar)
@@ -17,6 +19,7 @@ const borrar = () => {
             <button onClick={borrar}>Borrar</button>
             <button><Link to={`/movies/id/${id}`}>Detalle</Link></button>
             <button><Link to={`//id/${id}`}>Ver Más</Link></button>
+            <button onClick= {()=> props.favorito(props.pelicula)}>❤</button>
         </div>
     </div>
 
