@@ -11,9 +11,6 @@ class Home extends Component {
       cargando: true,
       populares: [],
       encartel: [],
-      filtradas: [],
-      filtradasBy:[],
-      favoritos: []
     };
   }    
 
@@ -41,9 +38,6 @@ class Home extends Component {
     
  }
 
- agregarMas() {
-  // Logica para agregar mas personajes
- }
 
   render() {
     return ( 

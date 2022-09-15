@@ -21,16 +21,29 @@ class Encartel extends Component {
                 console.log(datos)
                  return this.setState({
                 encartel: datos.results,
+                more: datos.page
             })})
             .catch( err => console.log(err))
  }
 
+
+ agregarMas(){
+  const more = `https://api.themoviedb.org/3/movie/popular?api_key=c0945689b0a582e110971301d6ea8be2&language=es&page=${this.state.more+1}`
+  fetch(more)
+      .then((res)=>res.json())
+      .then(data=>this.setState({
+          more:data.page,
+          encartel: this.state.encartel.concat(data.results)
+      }))
+      .catch((error)=>{console.log(error)})
+}
 
   render() {
     return ( 
 <>
     <div class="titulo">
           <h2>• PELÍCULAS EN CARTEL •</h2>
+          <button onClick={()=>this.agregarMas()} >Ver Más Peliculas</button>
     </div>
     <section className='contenedor1'>
             {this.state.cargando === false ? (

@@ -7,8 +7,7 @@ export default function Footer(){
             <article className="container_footer">
                 <div className="box-footer">
                     <div className="logo">
-                        <img src="./img/logo.jpeg
-                        " alt="logo tdmb"/>
+                        <img src="" alt="logo tdmb"/>
                     </div>
                     <div className="terms">
                     </div>
