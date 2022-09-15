@@ -206,7 +206,8 @@ footer {
 /* Aquí comienza el main */
 
 .titulo{
-    display: inline-block;
+    display: flex;
+
     background-color: #080f28;
     color: white;
     max-width: 1900px;
@@ -889,4 +890,10 @@ a{
     }
 }
 
+/* Nuevo CSS para el proyecto */
 
+.vermas{
+    margin-left: 15px;
+    height: 5vh;
+}
+    
