@@ -53,7 +53,7 @@ class Home extends Component {
             this.state.populares.map(pelicula =>(
                <Card key={pelicula.id} pelicula={pelicula}/>)
            )
-           )  
+           )   
             }      
     </section>
     <div className="titulo">
