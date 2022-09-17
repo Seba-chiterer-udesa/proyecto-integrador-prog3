@@ -11,7 +11,9 @@ class Home extends Component {
       cargando: true,
       populares: [],
       encartel: [],
-      favoritos: []
+      favoritos: [],
+      filterBy:'',
+      results: [],
     };
   }    
 
@@ -59,9 +61,71 @@ class Home extends Component {
   }
 }
 
+filtrarPeliculas(filtro){
+
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=fcb65972de75954111563f90b05f9fed&language=es&query=${filtro}`
+  fetch(url)
+      .then((res)=> res.json())
+      .then(datos =>{ 
+          console.log(datos)
+          this.setState({
+            results: datos.results
+          })
+      })
+      .catch( error => console.log(error))
+      
+}
+
+handleChange(e){
+  if (e.target.value.length === 0) {
+    e.preventDefault()
+    this.setState({
+       filterBy: '',
+        results:[]})
+} else {
+    this.setState({
+      filterBy: e.target.value}, ()=>{this.filtrarPeliculas(this.state.filterBy)
+      })
+}
+    /* console.log (e.target.value) */
+ }
+
+
+
   render() {
     return ( 
 <>
+   <div className='titulo'> 
+        <form>
+              <input type='search' name='search' placeholder='Buscar Películas...' onChange={(e)=>{this.handleChange(e)}} value={this.state.filterBy}/>
+        </form>
+    </div>
+
+    {this.state.results.length  ? 
+ 
+  <>
+
+  <div className="titulo">
+      <h2>• RESULTADOS DE BUSQUEDA •</h2>
+  </div>  
+      
+  <section className='contenedor'>
+            {this.state.cargando === false ? (
+             <p>Cargando</p>
+            ) : (
+            this.state.results.map(results =>(
+               <Card key={results.id} pelicula={results} favorito={(results)=> this.handleFavoritos(results)}/>)
+           )
+           )   
+            }      
+  </section>
+
+  </>
+
+    :
+
+  <>
+
     <div className="titulo">
           <h2>• LO MÁS VISTO EN PELÍCULAS •</h2>
           <Link to='/populares'><button className='vermas'>Ver Mas</button></Link>
@@ -90,12 +154,15 @@ class Home extends Component {
            )  
             }
     </section>
+    
+    </> 
+      
+    
+    }
+       
 </>
 
-    
     )
-          
-    
   }
 }
 export default Home;

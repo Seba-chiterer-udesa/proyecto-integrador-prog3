@@ -9,6 +9,12 @@ a{
 
 input{
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    border:none;
+    color: white;  
+    background-color: #007aff;
+    padding: 8px 8px;
+    text-align: left;
+    border-radius: 30px;
 }
 
 body{
@@ -896,4 +902,6 @@ a{
     margin-left: 15px;
     height: 5vh;
 }
+
+
     
