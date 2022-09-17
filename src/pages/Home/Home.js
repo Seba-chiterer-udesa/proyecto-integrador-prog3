@@ -14,7 +14,7 @@ class Home extends Component {
       favoritos: [],
       filterBy:'',
       results: [],
-    };
+    }
   }    
 
  componentDidMount(){
@@ -91,6 +91,23 @@ handleChange(e){
  }
 
 
+ borrarTarjeta(id){
+
+  const resto = this.state.populares.filter(populares => populares.id !== id)
+  this.setState({
+    populares: resto,
+  })
+
+    }
+
+  borrarTarjetaCartel(id){
+    
+    const resto = this.state.encartel.filter(encartel => encartel.id !== id)
+    this.setState({
+      encartel: resto
+    })
+
+  }
 
   render() {
     return ( 
@@ -135,7 +152,7 @@ handleChange(e){
              <p>Cargando</p>
             ) : (
             this.state.populares.map(pelicula =>(
-               <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula)=> this.handleFavoritos(pelicula)}/>)
+               <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula)=> this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)}/>)
            )
            )   
             }      
@@ -149,7 +166,7 @@ handleChange(e){
              <p>Cargando</p>
             ) : (
             this.state.encartel.map(pelicula =>(
-             <Card key={pelicula.id} pelicula={pelicula}/>)
+             <Card key={pelicula.id} pelicula={pelicula}  favorito={(pelicula)=> this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjetaCartel(personajeBorrar)}/>)
           )
            )  
             }

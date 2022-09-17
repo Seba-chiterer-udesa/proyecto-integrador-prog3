@@ -25,14 +25,20 @@ class Card extends Component {
       return (
         <div className="hijo">
         <div className="imagen-port">
+
             <Link to={`/movies/id/${id}`}><img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={poster_path}/></Link>
-            <h3>{title}</h3>                            
-            <button onClick={()=> this.props.borrarCard(id)}>Borrar</button> 
-            <button><Link to={`/movies/id/${id}`}>Detalle</Link></button>
+            <h3>{title}</h3>  
 
-           {this.state.description === true ? <p> {this.props.pelicula.overview} <button onClick={()=> this.vermas()}>Ver menos</button>  </p> : <button onClick={()=> this.vermas()}>Ver mas</button> }
+            <div className='buttons'>
 
-            <button onClick= {()=> this.props.favorito(this.props.pelicula)}>Favoritos</button>
+            <button className='button'><Link to={`/movies/id/${id}`}>Detalle</Link></button>
+            <button className='button' onClick= {()=> this.props.favorito(this.props.pelicula)}>Favoritos</button>
+            <button className='button' onClick={()=> this.props.borrarCard(id)}>Borrar</button> 
+            {this.state.description === true ? <p> {this.props.pelicula.overview} <button className='buttonvermas' onClick={()=> this.vermas()}>Ver menos</button>  </p> : <button className='buttonvermas' onClick={()=> this.vermas()}>Ver mas</button> }
+
+            </div>                          
+            
+            
         </div>
     </div>
 
