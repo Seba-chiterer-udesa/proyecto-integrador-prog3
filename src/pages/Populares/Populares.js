@@ -42,7 +42,7 @@ class Populares extends Component {
       <>
        <div className="titulo">
               <h2>• PELÍCULAS POPULARES •</h2>
-              <button onClick={()=>this.agregarMas()} >Ver Más Peliculas</button>
+              <button className='vermas' onClick={()=>this.agregarMas()}>Más Peliculas</button>
        </div>
        <section className='contenedor'>
                 {this.state.cargando === false ? (

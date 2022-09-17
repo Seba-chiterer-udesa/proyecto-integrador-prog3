@@ -17,8 +17,15 @@ class Favoritos extends Component {
   render() {
     return (
       <>
+         <div className="titulo">
+            <h2>• FAVORITOS •</h2>
+         </div>  
+
+        <section className='contenedor'>
 
         { this.state.favoritos.length > 0 ? this.state.favoritos.map(pelicula => <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula) => this.handleFavoritos(pelicula)} />):<p> cargando</p>}
+
+        </section>
 
 
       </>

@@ -43,7 +43,7 @@ class Encartel extends Component {
 <>
     <div class="titulo">
           <h2>• PELÍCULAS EN CARTEL •</h2>
-          <button onClick={()=>this.agregarMas()} >Ver Más Peliculas</button>
+          <button className='vermas' onClick={()=>this.agregarMas()}>Más Peliculas</button>
     </div>
     <section className='contenedor1'>
             {this.state.cargando === false ? (

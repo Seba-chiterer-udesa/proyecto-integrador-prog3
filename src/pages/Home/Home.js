@@ -31,7 +31,7 @@ class Home extends Component {
         .then(datos =>{ 
             console.log(datos)
              return this.setState({
-            populares: datos.results,
+            populares: datos.results.slice(0,12),
         })})
         .catch( err => console.log(err))
 
@@ -41,7 +41,7 @@ class Home extends Component {
             .then(datos =>{ 
                 console.log(datos)
                  return this.setState({
-                encartel: datos.results,
+                encartel: datos.results.slice(0,12),
             })})
             .catch( err => console.log(err))
       

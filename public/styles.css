@@ -9,8 +9,8 @@ a{
 
 input{
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
-    border:none;
     color: white;  
+    border: none;
     background-color: #007aff;
     padding: 8px 8px;
     text-align: left;
@@ -213,7 +213,7 @@ footer {
 
 .titulo{
     display: flex;
-
+    justify-content: space-between;
     background-color: #080f28;
     color: white;
     max-width: 1900px;
@@ -899,8 +899,14 @@ a{
 /* Nuevo CSS para el proyecto */
 
 .vermas{
-    margin-left: 15px;
-    height: 5vh;
+    border: white;
+    border-width: 2px;
+    border-style: solid;
+    color: white;
+    background-color: #007aff;
+    padding: 10px 10px;
+    border-radius: 30px;
+    
 }
 
 
