@@ -185,11 +185,15 @@ footer {
     font-size: 25px;
 }
 .box-copyright {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     text-align: center;
     padding: 0px 20px;
     color: white;
+}
+
+.box-copyright hr{
+    max-width: 100%;
 }
 
 .box-copyright .integrantes {

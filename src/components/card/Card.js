@@ -7,6 +7,7 @@ class Card extends Component {
       super(props)
       this.state = {
          description: false,
+         button: JSON.parse(localStorage.getItem('favoritos')).some((fav)=> fav.id === this.props.pelicula.id)
       }
   }
 
@@ -20,6 +21,10 @@ class Card extends Component {
   }
 
  
+  handleButton(){
+    this.setState({button: !this.state.button}, () => {this.props.favorito(this.props.pelicula)})
+  }
+
   render() {
     let {poster_path, title, id} = this.props.pelicula
       return (
@@ -32,7 +37,8 @@ class Card extends Component {
             <div className='buttons'>
 
             <button className='button'><Link to={`/movies/id/${id}`}>Detalle</Link></button>
-            <button className='button' onClick= {()=> this.props.favorito(this.props.pelicula)}>Favoritos</button>
+            {/* <button className='button' onClick= {()=> this.props.favorito(this.props.pelicula)}>Favoritos</button> */}
+            <button className='button' onClick={()=> this.handleButton()}> {this.state.button ? 'Quitar de Favoritos' : 'Agregar a Favoritos'}</button> 
             <button className='button' onClick={()=> this.props.borrarCard(id)}>Borrar</button> 
             {this.state.description === true ? <p> {this.props.pelicula.overview} <button className='buttonvermas' onClick={()=> this.vermas()}>Ver menos</button>  </p> : <button className='buttonvermas' onClick={()=> this.vermas()}>Ver mas</button> }
 

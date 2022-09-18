@@ -10,6 +10,8 @@ class Populares extends Component {
       cargando: true,
       populares: [],
       favoritos: [],
+      results: [],
+      filterBy: '',
     };
   }    
 
@@ -64,26 +66,79 @@ borrarTarjeta(id){
   this.setState({
     populares: resto,
   })
-
     }
+
+
+  filrarPopulares(filtro){
+      let filtradas = this.state.populares.filter((pelicula =>  pelicula.title.includes(filtro)))
+      this.setState({results: filtradas})      
+  }
+
+  handleChange(e){
+      if (e.target.value.length === 0) {
+          e.preventDefault()
+          this.setState(
+              {filterBy: '',
+              results: [],
+          })
+      } else {
+          this.setState(
+              {filterBy: e.target.value}, 
+              ()=>{this.filtrarPopulares(this.state.filterBy)})
+      }
+      //console.log (e.target.value)
+  }  
 
   render() {
     return (
       <>
-       <div className="titulo">
-              <h2>• PELÍCULAS POPULARES •</h2>
-              <button className='vermas' onClick={()=>this.agregarMas()}>Más Peliculas</button>
+
+       <div className='titulo'> 
+            <form>
+                <input type='search' name='search' placeholder='Buscar Populares...' onChange={(e)=>{this.handleChange(e)}} value={this.state.filterBy}/>
+            </form>
        </div>
-       <section className='contenedor'>
-                {this.state.cargando === false ? (
-                 <p>Cargando</p>
-               ) : (
-                this.state.populares.map(pelicula =>(
-                   <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula)=> this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)}/>)
-              )
-              )  
+
+       {this.state.results.length  ?  
+
+        <>
+
+          <div className="titulo">
+             <h2>• RESULTADOS DE BUSQUEDA • </h2>
+          </div>  
+    
+          <section className='contenedor'>
+                    {this.state.cargando === false ? (
+                     <p>Cargando</p>
+                   ) : (
+                    this.state.results.map(results =>(
+                      <Card key={results.id} pelicula={results} favorito={(results)=> this.handleFavoritos(results)}/>)
+                  )
+                   )   
+                    }      
+          </section>
+
+        </>
+        :
+        <>
+            <div className="titulo">
+                      <h2>• PELÍCULAS POPULARES •</h2>
+                      <button className='vermas' onClick={()=>this.agregarMas()}>Más Peliculas</button>
+            </div>
+            <section className='contenedor'>
+                    {this.state.cargando === false ? (
+                     <p>Cargando</p>
+                    ) : (
+                    this.state.populares.map(pelicula =>(
+                    <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula)=> this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)}/>)
+                    )
+                  )  
                 }      
-       </section>
+            </section>
+    
+         </>
+        
+         }
       </>
     )
   }
