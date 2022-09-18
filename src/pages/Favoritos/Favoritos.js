@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-/* import Header from '../../components/header/Header'; */
 import Card from '../../components/card/Card';
 
 
@@ -50,7 +49,7 @@ class Favoritos extends Component {
 
         <section className='contenedor'>
 
-        { this.state.favoritos.length > 0 ? this.state.favoritos.map(pelicula => <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula) => this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)} />):<h1>cargando...</h1>}
+        { this.state.favoritos.length > 0 ? this.state.favoritos.map(pelicula => <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula) => this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)} />):<h1 className='cargando'>cargando...</h1>}
 
         </section>
 

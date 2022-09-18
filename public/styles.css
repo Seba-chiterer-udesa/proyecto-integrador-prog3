@@ -1,8 +1,11 @@
+/* En este css estan los estilos que comparten muchos componentes de la pagina */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 a{
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
 }
@@ -44,13 +47,10 @@ body{
     border-radius: 15px;
 }
 
-
-
 .header-busqueda {
     display: flex;
     align-items: center;   
 }
-
 
 .burguermenu{ 
     margin-top: 6.5%;
@@ -62,10 +62,8 @@ body{
     background-color: #007aff;
     padding: 10px 10px;
     border-radius: 30px;
-    margin-top: 30px;
-    
+    margin-top: 30px; 
 }
-
 
 ::placeholder{
     color: white;
@@ -75,19 +73,18 @@ nav{
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-    
 } */
+
 header{
     background-image: url(../img/fondoclaro.jpg);
     max-width: 100%;
 }
+
 /* .logo {
     max-width: 100%;
      max-height: 135px; 
-    padding-bottom: 2px;
-    
+    padding-bottom: 2px; 
 } 
-
 
 .header-nav{
     padding: 40px 0px 0px 0px;
@@ -95,6 +92,7 @@ header{
 } */
 
 /* Aquí comienza el footer */
+
 /* footer {
     width: 100%;
     padding: 30px 20px;
@@ -118,6 +116,7 @@ header{
     border-top-right-radius: 15%;
     border-top-left-radius: 15%;
 }
+
 .box-footer {
     display: flex;
     flex-direction: column;
@@ -127,6 +126,7 @@ header{
 .box-footer .logo img {
     width: 200px;
 }
+
 .box-footer .terms {
     max-width: 350px;
     margin-top: 20px;
@@ -134,11 +134,13 @@ header{
     color:white;
     font-size: 18px;
 }
+
 .box-footer h2 {
     margin-bottom: 20px;
     color:white;
     font-weight: 700;
 }
+
 .box-footer a {
     color: white;
     margin-top: 20px;
@@ -146,9 +148,11 @@ header{
     text-decoration: none;
     font-family: 'Noto Sans JP', sans-serif;
 }
+
 .box-footer a .fab {
     font-size: 25px;
 }
+
 .box-copyright {
     max-width: 100%;
     margin: auto;
@@ -166,18 +170,21 @@ header{
     font-weight: bolder;
     
 }
+
 .box-copyright p {
     color: white;
     margin-top: 20px;
     text-align: center;
     font-size: 17px;
 }
+
 .box-copyright hr{
     background-color: white;
     width: 1200px;
     border: none;
     height: 3px;
 } */
+
 /* Aquí comienza el main */
 
  .titulo{
@@ -206,7 +213,6 @@ header{
     border-radius: 20px;
 }
 
-
 .contenedor1{
     display: flex;
     flex-wrap: wrap;
@@ -218,7 +224,6 @@ header{
     margin: auto;
     background-color: #080f28;
     border-radius: 20px;
-
 } 
 
 /* .contenedor2{
@@ -269,8 +274,7 @@ header{
     align-items: center;
     margin: 4%;
     padding: 2%;
-    border-radius: 15px;
-   
+    border-radius: 15px;  
 }
 
 .imagen-port img{
@@ -294,8 +298,8 @@ header{
     text-align: center;
     margin-bottom: 10px;
 } */
-/* Aqui comienza el registro y login*/
 
+/* Aqui comienza el registro y login*/
 
 /* form {
     display: inline-block;
@@ -345,6 +349,7 @@ form div label{
     color: white;
     margin: 4% 3%;
 }
+
 .detailseriessinopsis-container h3{
     text-transform: uppercase;
 }
@@ -440,29 +445,24 @@ a{
     #logo{
         margin-right: 15%;
     }
-
-    .lupa{
-        margin: 0px 10px 27px 5px;
-    }
     
 
     .box-copyright hr{
         display: none;
     }
+
     .box-footer h2{
         display: none;
     }
+
     .box-footer a {
         display: none;
     }
-
-    
 
     .hijo-detail-series {
         display: flex;
         flex-direction: column;  
     }
-    
     
     .detailseriessinopsis-container{
         width: 90%;
@@ -522,6 +522,10 @@ a{
     flex-wrap: wrap;
     justify-content: space-around;
 } 
+
+.cargando{
+    color: white;
+}
 
 
 

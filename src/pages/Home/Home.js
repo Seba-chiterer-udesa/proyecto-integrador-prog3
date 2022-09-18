@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Card from '../../components/card/Card';
 import { Link } from 'react-router-dom'
-/* import Header from '../../components/header/Header'; */
+
 
 
 class Home extends Component {

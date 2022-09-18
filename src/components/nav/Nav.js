@@ -1,20 +1,17 @@
 import React from 'react' 
 import {Link} from 'react-router-dom'
 import "./Nav.css";
+
+
 export default function Nav() {
 
   return (
 
     <header>
         <nav>
-                <div className="burguermenu">
-                            
-                </div>
                 <div id="logo" > 
-                    <Link to="/"> <img className="logo" src="/img/logo.png"/>       </Link>
-                    
-                     </div>
-                
+                    <Link to="/"> <img className="logo" src="/img/logo.png" alt='logo'/></Link>
+                </div>
                 <div className="header-nav">
                     <Link className="header-nav" aria-current="page" to="/">Inicio</Link>
                 </div>
