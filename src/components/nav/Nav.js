@@ -10,15 +10,11 @@ export default function Nav() {
                 <div className="burguermenu">
                             
                 </div>
-                <div className="box-footer">
-                <div className="box-footer">
-                    <div className="logo">
-                        <img src="/img/logo.png" alt="logo"/>
-                    </div>
-                    <div className="terms">
-                    </div>
-                </div>  
-                </div>
+                <div id="logo" > 
+                    <Link to="/"> <img className="logo" src="/img/logo.png"/>       </Link>
+                    
+                     </div>
+                
                 <div className="header-nav">
                     <Link className="header-nav" aria-current="page" to="/">Inicio</Link>
                 </div>
