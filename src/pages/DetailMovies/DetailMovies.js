@@ -75,7 +75,11 @@ class DetailMovies extends Component {
      </>   
    
   )
+
+
 }
+
+
 }
 
 export default DetailMovies;
