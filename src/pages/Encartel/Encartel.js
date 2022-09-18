@@ -124,7 +124,7 @@ handleChange(e){
       :
 
       <>
-          <div class="titulo">
+          <div className="titulo">
                  <h2>• PELÍCULAS EN CARTEL •</h2>
                  <button className='vermas' onClick={()=>this.agregarMas()}>Más Peliculas</button>
            </div>
