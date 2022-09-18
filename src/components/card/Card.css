@@ -38,29 +38,5 @@
     background-color:#080f28;
 }
 
-.buttonvermas{
-    border: white;
-   border-style: solid;
-   border-radius: 30px;
-   background-color: #007aff;
-   border-width: 1px;
-   padding: 8px;
-   color: white;
-   margin-top: 10px;
-}
 
-.buttons{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.button{
-    border: white;
-    border-style: solid;
-    border-radius: 30px;
-    background-color: #007aff;
-    border-width: 1px;
-    padding: 8px;
-    color: white;
- }
