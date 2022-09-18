@@ -15,36 +15,36 @@ export default function Footer(){
                 
                 <div className="box-footer">
                     <h2> NOSOTROS </h2>
-                    <a href="#">¿Quiénes somos?</a>
+                    <a href="/">¿Quiénes somos?</a>
     
-                    <a href="#">Información coorporativa</a>
+                    <a href="/">Información coorporativa</a>
     
-                    <a href="#">Trabajá con nosotros</a>
+                    <a href="/">Trabajá con nosotros</a>
     
-                    <a href="#">Contacto</a>
+                    <a href="/">Contacto</a>
                 </div>
     
                 <div className="box-footer">
                     <h2> AYUDA </h2>
-                    <a href="#">Preguntas frecuentas</a>
+                    <a href="/">Preguntas frecuentas</a>
     
-                    <a href="#">Términos de uso</a>
+                    <a href="/">Términos de uso</a>
     
-                    <a href="#">Preferencia de cookies</a>
+                    <a href="/">Preferencia de cookies</a>
     
-                    <a href="#">Privacidad</a>
+                    <a href="/">Privacidad</a>
                 </div>
                 
                 <div className="box-footer">
                     <h2> REDES SOCIALES </h2>
                 
-                    <a href="#"> <i className="fab fa-instagram"></i> Instagram</a> 
+                    <a href="/"> <i className="fab fa-instagram"></i> Instagram</a> 
                        
-                    <a href="#"><i className="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="/"><i className="fab fa-facebook-square"></i> Facebook</a>
                         
-                    <a href="#"><i className="fab fa-youtube"></i> Youtube</a>
+                    <a href="/"><i className="fab fa-youtube"></i> Youtube</a>
                        
-                    <a href="#"><i className="fab fa-amazon"></i> Amazon</a>              
+                    <a href="/"><i className="fab fa-amazon"></i> Amazon</a>              
                 </div>
              
                 <div className="box-copyright">

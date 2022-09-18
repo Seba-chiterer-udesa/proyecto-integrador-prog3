@@ -11,7 +11,7 @@ class Encartel extends Component {
       encartel: [],
       favoritos: [],
       results: [],
-      filterBy: '',
+      filterBy:'',
     };
   }    
 
@@ -71,7 +71,7 @@ borrarTarjetaCartel(id){
 
 
 filrarEncartel(filtro){
-  let filtradas = this.state.encartel.filter(pelicula => {return pelicula.title.includes(filtro)})
+  let filtradas = this.state.encartel.filter(pelicula => pelicula.title.includes(filtro))
   this.setState({results: filtradas})      
 }
 
@@ -84,8 +84,7 @@ handleChange(e){
       })
   } else {
       this.setState(
-          {filterBy: e.target.value}, 
-          ()=>{this.filtrarEncartel(this.state.filterBy)})
+          {filterBy: e.target.value}, ()=>{this.filtrarEncartel(this.state.filterBy)})
   }
   //console.log (e.target.value)
 }  

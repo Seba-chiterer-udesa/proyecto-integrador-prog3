@@ -70,7 +70,7 @@ borrarTarjeta(id){
 
 
   filrarPopulares(filtro){
-      let filtradas = this.state.populares.filter((pelicula =>  pelicula.title.includes(filtro)))
+      let filtradas = this.state.populares.filter(((pelicula) => {return pelicula.title.toLowerCase().includes(filtro.toLowerCase())} ))
       this.setState({results: filtradas})      
   }
 

@@ -5,9 +5,10 @@ class DetailMovies extends Component {
     constructor(props){
         super(props)
         this.state={
-            id: this.props.match.params.id, /* Preguntar que es ese match */
+            id: this.props.match.params.id, 
             pelicula: {},
             favoritos: [],
+            button: [],
         }
     }
 
@@ -33,13 +34,17 @@ class DetailMovies extends Component {
             this.setState({favoritos: this.state.favoritos.filter(item => item.id !== card.id)}, () => {//asincronismo del this.State ",()"
                 localStorage.setItem("favoritos", JSON.stringify(this.state.favoritos))
             })
-            console.log(this.state.favoritos.filter(item => item.id !== card.id))
         } else {                                                               
             this.setState({favoritos: [...this.state.favoritos, card]}, () => { //el "..." significa traeme todo lo que estaba en el array favoritos y el ", card" significaa que le agrego la nueva card que te estoy pasando
                 localStorage.setItem("favoritos", JSON.stringify(this.state.favoritos))
             })
         }
       }
+
+handleButton(){
+    this.setState({button: !this.state.button}, () => {this.handleFavoritos(this.state.pelicula)})
+    }
+
 
   render(){
    
@@ -66,7 +71,7 @@ class DetailMovies extends Component {
                 <div className="boton-favoritos">
                     <div className="detail-favoritos">
                         <i className="fas fa-star star" id="star"></i>
-                        <button className="fav">Agregar a Favoritos</button>   
+                        <button className='fav' onClick={()=> this.handleButton()}> {this.state.button ? 'Quitar de Favoritos' : 'Agregar a Favoritos'}</button>  
                     </div>
                 </div>
              </div>
