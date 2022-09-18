@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import "./DetailMovies.css"
 class DetailMovies extends Component {
 
     constructor(props){

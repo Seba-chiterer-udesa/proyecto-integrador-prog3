@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../../components/card/Card';
 /* import Header from '../../components/header/Header'; */
+import "./Encartel.css";
 
 class Encartel extends Component {
    
