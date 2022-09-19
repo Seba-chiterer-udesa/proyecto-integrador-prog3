@@ -25,6 +25,7 @@ class Home extends Component {
    } else {
      localStorage.setItem('favoritos', JSON.stringify(this.state.favoritos))
    }
+   
 
     const populares = "https://api.themoviedb.org/3/movie/popular?api_key=fcb65972de75954111563f90b05f9fed"
     fetch(populares)
@@ -115,7 +116,8 @@ handleChange(e){
 <>
    <div className='titulo'> 
         <form>
-              <input type='search' name='search' placeholder='Buscar Películas...' onChange={(e)=>{this.handleChange(e)}} value={this.state.filterBy}/>
+              <input type='search' name='search' placeholder='Buscar Películas...' 
+              onChange={(e)=>{this.handleChange(e)}} value={this.state.filterBy}/>
         </form>
     </div>
 
@@ -153,7 +155,8 @@ handleChange(e){
              <p>Cargando</p>
             ) : (
             this.state.populares.map(pelicula =>(
-               <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula)=> this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)}/>)
+               <Card key={pelicula.id} pelicula={pelicula} favorito={(pelicula)=> this.handleFavoritos(pelicula)}
+                borrarCard={(personajeBorrar) => this.borrarTarjeta(personajeBorrar)}/>)
            )
            )   
             }      
@@ -167,7 +170,8 @@ handleChange(e){
              <p>Cargando</p>
             ) : (
             this.state.encartel.map(pelicula =>(
-             <Card key={pelicula.id} pelicula={pelicula}  favorito={(pelicula)=> this.handleFavoritos(pelicula)} borrarCard={(personajeBorrar) => this.borrarTarjetaCartel(personajeBorrar)}/>)
+             <Card key={pelicula.id} pelicula={pelicula}  favorito={(pelicula)=> this.handleFavoritos(pelicula)}
+              borrarCard={(personajeBorrar) => this.borrarTarjetaCartel(personajeBorrar)}/>)
           )
            )  
             }

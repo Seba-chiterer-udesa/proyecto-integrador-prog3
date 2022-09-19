@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/header/Header'
+import Nav from './components/nav/Nav'
 import Footer from './components/footer/Footer';
 import Home from './pages/Home/Home';
 import DetailMovies from './pages/DetailMovies/DetailMovies';
@@ -12,7 +12,7 @@ import {Switch, Route} from 'react-router-dom'
 function App() {
   return (
     <>
-    <Header/>
+    <Nav/>
 
     <Switch>
           <Route path="/" exact component={Home} />

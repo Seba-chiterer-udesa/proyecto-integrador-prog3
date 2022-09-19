@@ -16,7 +16,7 @@ export default function Nav() {
                     <Link className="header-nav" aria-current="page" to="/">Inicio</Link>
                 </div>
                 <div className="header-nav">
-                    <Link className="header-nav" aria-current="page" to="/populares">Populares</Link>
+                    <Link className="header-nav"  aria-current="page" to="/populares">Populares</Link>
                 </div>
                 <div className="header-nav">
                     <Link className="header-nav" aria-current="page" to="/encartel">En Cartel</Link>

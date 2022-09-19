@@ -1,0 +1,21 @@
+.contenedor404{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1900px;
+    margin: auto;
+    background-color: #080f28;
+    border-radius: 20px;
+    margin-top: 36px;
+}
+
+.contenedor404 h3{
+    color: white;
+}
+
+.contenedor404 h1{
+    color: white;
+}

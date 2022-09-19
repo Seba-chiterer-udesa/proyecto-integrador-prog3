@@ -60,3 +60,8 @@ nav{
     padding: 40px 0px 0px 0px;
     font-family: 'Noto Sans JP', sans-serif;
 }
+
+
+.header-nav:hover{
+    color: #080f28;
+}

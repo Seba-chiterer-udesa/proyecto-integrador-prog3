@@ -50,7 +50,7 @@ function Footer(){
                 </div>
              
                 <div className="box-copyright">
-                    <p className="integrantes"> Banfilms es un servicio de streaming gratuito que tiene como objetivo que todas las personas puedan accerder a contenido de calidad. Surge como una iniciativa de la coorporativa DI Code, encabezada y desarrollada por sus dueños fundadores Chiterer Sebastian y Cristiano Banfi.</p>
+                    <p className="integrantes"> Banfilms es un servicio de streaming gratuito que tiene como objetivo que todas las personas puedan accerder a contenido de calidad. Surge como una iniciativa de la coorporativa D&I Code, encabezada y desarrollada por sus dueños fundadores Chiterer Sebastian y Banfi Cristiano.</p>
                     <hr/>
                     <p className="derechos">Todos los derechos reservados <i className="far fa-copyright"></i> 2021 <b>Banfilms</b></p>
                 </div>

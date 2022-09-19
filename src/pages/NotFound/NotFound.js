@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './NotFound.css'
 
 const NotFound = () => {
   return (
     <>
-        <h1>🙃 404 | <span style={{color: 'red'}}>La pagina no existe</span></h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <section className='contenedor404'>
+            <h1>🙃 404 | <span style={{color: 'red'}}>La página no existe</span></h1>
+            <h3>La página a la que intentas acceder no existe. </h3>
+      </section>
+        
     </>
   )
 }

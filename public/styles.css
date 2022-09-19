@@ -496,6 +496,10 @@ a{
     border-radius: 30px;   
 }
 
+.vermas:hover{
+    color: #080f28;
+}
+
 .button{
    border: white;
    border-style: solid;
