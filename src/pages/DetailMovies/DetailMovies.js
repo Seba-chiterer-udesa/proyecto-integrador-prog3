@@ -25,7 +25,7 @@ class DetailMovies extends Component {
         fetch(`https://api.themoviedb.org/3/movie/${this.state.id}?api_key=fcb65972de75954111563f90b05f9fed`)
             .then(res => res.json())
             .then(data => this.setState({
-                cargando: true,
+                cargando: false,
                 pelicula: data,
                 genero: data.genres[1].name,
                 button: JSON.parse(localStorage.getItem('favoritos')).some((fav)=> fav.id === this.state.pelicula.id)
@@ -57,7 +57,7 @@ handleButton(){
 
     return (
 <>
-     {this.state.cargando === true ? <><section className='contenedor'><h1 style={{color: 'white'}}>Cargando...</h1></section></>
+     {this.state.cargando === true ? <><section className='loading'><h1 style={{color: 'white'}}>Cargando...</h1></section></>
      
      : 
      

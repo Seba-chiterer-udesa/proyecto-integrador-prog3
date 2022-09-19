@@ -508,9 +508,18 @@ a{
    border-width: 1px;
    padding: 8px;
    color: white;
+   margin-top: 10px;
 }
 
-.buttonvermas{
+.button:hover{
+    color: black;
+}
+
+.button a:hover{
+    color: #000;
+}
+
+/* .buttonvermas{
     border: white;
    border-style: solid;
    border-radius: 30px;
@@ -519,7 +528,7 @@ a{
    padding: 8px;
    color: white;
    margin-top: 10px;
-}
+} */
 
 .buttons{
     display: flex;

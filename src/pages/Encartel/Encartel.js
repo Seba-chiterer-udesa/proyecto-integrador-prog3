@@ -85,7 +85,9 @@ handleChange(e){
       })
   } else {
       this.setState(
-          {filterBy: e.target.value}, ()=>{this.filtrarEncartel(this.state.filterBy)})
+          {filterBy: e.target.value}, 
+          ()=>{this.filtrarEncartel(this.state.filterBy)})
+          console.log(this.state.filterBy);
   }
   //console.log (e.target.value)
 }  
@@ -128,7 +130,7 @@ handleChange(e){
                  <h2>• PELÍCULAS EN CARTEL •</h2>
                  <button className='vermas' onClick={()=>this.agregarMas()}>Más Peliculas</button>
            </div>
-            <section className='contenedor1'>
+            <section className='contenedor'>
                    {this.state.cargando === false ? (
                     <p>Cargando</p>
                    ) : (

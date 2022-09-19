@@ -165,7 +165,7 @@ handleChange(e){
           <h2>• PELÍCULAS EN CARTEL •</h2>
           <Link to='/encartel'><button className='vermas'>Ver Mas</button></Link>
     </div>
-    <section className='contenedor1'>
+    <section className='contenedor'>
             {this.state.cargando === false ? (
              <p>Cargando</p>
             ) : (
