@@ -71,7 +71,7 @@ borrarTarjetaCartel(id){
 }
 
 
-filrarEncartel(filtro){
+filtrarEncartel(filtro){
   let filtradas = this.state.encartel.filter(pelicula => pelicula.title.includes(filtro))
   this.setState({results: filtradas})      
 }
